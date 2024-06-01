@@ -120,11 +120,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC      &kp N1          &kp N2      &kp N3   &kp N4        &kp N5                         &kp N6  &kp N7    &kp N8    &kp N9      &kp N0      &kp EQUAL
-&kp TAB      &kp SQT         &kp COMMA   &kp DOT  &kp P         &kp Y                          &kp F   &kp G     &kp C     &kp R       &kp L       &kp FSLH
-&shiftmorph  &mt LEFT_GUI A  &mt LALT O  &kp E    &kp U         &kp I                          &kp D   &kp H     &kp T     &mt LALT N  &mt LGUI S  &kp MINUS
-&ctrl_sym    &kp SEMI        &kp Q       &kp J    &kp K         &kp X   &kp DEL      &kp BSPC  &kp B   &kp M     &kp W     &kp V       &kp Z       &kp BSLH
-                                         &to 2    &kp LEFT_ALT  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC      &kp N1          &kp N2      &kp N3   &kp N4        &kp N5                          &kp N6     &kp N7    &kp N8    &kp N9      &kp N0      &kp EQUAL
+&kp TAB      &kp SQT         &kp COMMA   &kp DOT  &kp P         &kp Y                           &kp F      &kp G     &kp C     &kp R       &kp L       &kp FSLH
+&shiftmorph  &mt LEFT_GUI A  &mt LALT O  &kp E    &kp U         &kp I                           &kp D      &kp H     &kp T     &mt LALT N  &mt LGUI S  &kp MINUS
+&ctrl_sym    &kp SEMI        &kp Q       &kp J    &kp K         &kp X      &kp DEL    &kp BSPC  &kp B      &kp M     &kp W     &kp V       &kp Z       &kp BSLH
+                                         &to 2    &sk LEFT_ALT  &kp SPACE  &mo 1      &mo 2     &kp ENTER  &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -161,11 +161,11 @@
 
             display-name = "Raise";
             bindings = <
-&numword ESCAPE  &kp LS(LPAR)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(RPAR)                            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &bt BT_CLR
-&numword TAB     &kp LBKT      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RBKT                                &none         &none         &none         &none         &none      &none
-&trans           &kp GRAVE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL                               &trans        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT  &none
-&trans           &kp FSLH      &kp KP_MINUS     &kp KP_NUMBER_0  &kp KP_DOT       &kp BSLH      &trans            &trans  &kp KP_PLUS   &kp HOME      &kp PG_DN     &kp PG_UP     &kp END    &none
-                                                &trans           &trans           &trans        &numword SPACE    &trans  &trans        &trans        &trans
+&numword ESCAPE  &kp LS(LPAR)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(RPAR)                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &bt BT_CLR
+&numword TAB     &kp LBKT      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RBKT                          &none         &none         &none         &none         &none      &none
+&trans           &kp GRAVE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL                         &trans        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT  &none
+&trans           &kp FSLH      &kp KP_MINUS     &kp KP_NUMBER_0  &kp KP_DOT       &kp BSLH        &trans    &trans  &kp KP_PLUS   &kp HOME      &kp PG_DN     &kp PG_UP     &kp END    &none
+                                                &trans           &trans           &numword SPACE  &trans    &trans  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
