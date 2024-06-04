@@ -87,6 +87,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "NUMWORD";
         };
+
+        passchunk: passchunk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&none &kp &kp &kp &kp>;
+
+            label = "PASSCHUNK";
+        };
     };
 
     behaviors {
@@ -138,7 +146,7 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "Nav";
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8   &kp F9   &kp F15                    &trans        &trans     &trans         &trans        &trans     &trans
 &trans  &kp F11  &kp F4  &kp F5   &kp F6   &kp F14                    &kp LC(R)     &kp LC(V)  &kp LC(C)      &kp LC(X)     &kp LC(Z)  &none
@@ -174,14 +182,34 @@
 
         sym_layer {
             bindings = <
-&trans     &none          &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &none                           &trans  &trans  &degree  &trans  &trans  &plus_minus
-&trans     &kp LS(QMARK)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)                    &trans  &trans  &trans   &trans  &trans  &trans
-&trans     &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PLUS)                    &trans  &trans  &trans   &trans  &trans  &trans
-&sk LCTRL  &kp LS(QMARK)  &kp LS(EXCL)  &kp LS(RPAR)   &none          &kp LS(PIPE)  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans
-                                        &trans         &trans         &trans        &trans    &trans  &trans  &trans  &trans
+&trans     &none               &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &none                                  &trans  &trans  &degree           &trans  &trans  &plus_minus
+&trans     &kp LS(LEFT_BRACE)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(RIGHT_BRACE)                    &trans  &trans  &kp K_CALCULATOR  &trans  &trans  &trans
+&trans     &kp LS(TILDE)       &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PLUS)                           &trans  &trans  &trans            &trans  &trans  &trans
+&sk LCTRL  &kp LS(QMARK)       &kp LS(EXCL)  &kp LS(RPAR)   &none          &kp LS(PIPE)         &trans    &trans  &trans  &trans  &trans            &trans  &trans  &trans
+                                             &trans         &trans         &trans               &trans    &trans  &trans  &trans  &trans
             >;
 
             label = "symbols";
+        };
+
+        passchunk1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        passchunk2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
