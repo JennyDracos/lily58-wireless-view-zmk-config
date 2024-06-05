@@ -50,6 +50,18 @@
             key-positions = <15 16>;
             layers = <2>;
         };
+
+        numenter {
+            bindings = <&kp KP_ENTER>;
+            key-positions = <28 40>;
+            layers = <2>;
+        };
+
+        comma {
+            bindings = <&commaspace>;
+            key-positions = <14 26>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -88,12 +100,11 @@
             label = "NUMWORD";
         };
 
-        passchunk: passchunk {
+        commaspace: commaspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&none &kp &kp &kp &kp>;
-
-            label = "PASSCHUNK";
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMASPACE";
         };
     };
 
