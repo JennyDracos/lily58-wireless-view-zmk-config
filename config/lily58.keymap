@@ -159,11 +159,11 @@
 
             display-name = "Nav";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8   &kp F9   &kp F15                    &trans        &trans     &trans         &trans        &trans     &trans
-&trans  &kp F11  &kp F4  &kp F5   &kp F6   &kp F14                    &kp LC(R)     &kp LC(V)  &kp LC(C)      &kp LC(X)     &kp LC(Z)  &none
-&trans  &kp F10  &kp F1  &kp F2   &kp F3   &kp F13                    &kp CAPSLOCK  &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
-&trans  &none    &kp F1  &kp F10  &kp F12  &none    &trans    &trans  &kp INS       &kp HOME   &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
-                         &trans   &trans   &trans   &trans    &trans  &trans        &trans     &trans
+&trans  &kp F12  &kp F7  &kp F8   &kp F9   &kp F15                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &trans     &bt BT_CLR
+&trans  &kp F11  &kp F4  &kp F5   &kp F6   &kp F14                    &kp LC(R)     &kp LC(V)     &kp LC(C)      &kp LC(X)     &kp LC(Z)  &none
+&trans  &kp F10  &kp F1  &kp F2   &kp F3   &kp F13                    &kp CAPSLOCK  &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&trans  &none    &kp F1  &kp F10  &kp F12  &none    &trans    &trans  &kp INS       &kp HOME      &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
+                         &trans   &trans   &trans   &trans    &trans  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -180,15 +180,15 @@
 
             display-name = "Raise";
             bindings = <
-&numword ESCAPE  &kp LS(LPAR)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(RPAR)                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &bt BT_CLR
-&numword TAB     &kp LBKT      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RBKT                          &none         &none         &none         &none         &none      &none
-&trans           &kp GRAVE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL                         &trans        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT  &none
-&trans           &kp FSLH      &kp KP_MINUS     &kp KP_NUMBER_0  &kp KP_DOT       &kp BSLH        &trans    &trans  &kp KP_PLUS   &kp HOME      &kp PG_DN     &kp PG_UP     &kp END    &none
-                                                &trans           &trans           &numword SPACE  &trans    &trans  &trans        &trans        &trans
+&numword ESCAPE  &kp LS(LPAR)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(RPAR)                      &trans        &trans    &trans     &trans     &trans     &trans
+&numword TAB     &kp LBKT      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RBKT                          &none         &none     &none      &none      &none      &none
+&trans           &kp GRAVE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL                         &kp CAPSLOCK  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+&trans           &kp FSLH      &kp KP_MINUS     &kp KP_NUMBER_0  &kp KP_DOT       &kp BSLH        &trans    &trans  &kp INS       &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+                                                &trans           &trans           &numword SPACE  &trans    &trans  &trans        &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            label = "numbers";
+            label = "Num";
         };
 
         sym_layer {
