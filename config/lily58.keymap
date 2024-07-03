@@ -69,8 +69,13 @@
         };
 
         alt-o {
-            bindings = <&kp O>;
+            bindings = <&kp LA(O)>;
             key-positions = <25 26>;
+        };
+
+        pwdshortcut {
+            bindings = <&kp LC(SEMICOLON)>;
+            key-positions = <36 37>;
         };
     };
 
