@@ -193,7 +193,7 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Raise";
+            display-name = "Num";
             bindings = <
 &numword ESCAPE  &kp LS(LPAR)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(RPAR)                      &trans        &trans    &trans     &trans     &trans     &trans
 &numword TAB     &kp LBKT      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RBKT                          &none         &none     &none      &none      &none      &none
