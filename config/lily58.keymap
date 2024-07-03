@@ -158,7 +158,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Return to base on tap-dance";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
+            bindings = <&to 1>, <&to 0>;
         };
     };
 
