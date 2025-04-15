@@ -77,6 +77,11 @@
             bindings = <&kp LC(SEMICOLON)>;
             key-positions = <36 37>;
         };
+
+        symbol {
+            bindings = <&mo 3>;
+            key-positions = <36 24>;
+        };
     };
 
     macros {
