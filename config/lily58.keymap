@@ -93,6 +93,11 @@
             bindings = <&msc SCRL_DOWN>;
             key-positions = <29 41>;
         };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <38 40>;
+        };
     };
 
     macros {
@@ -176,6 +181,34 @@
             #binding-cells = <0>;
             bindings = <&to 1>, <&to 0>;
         };
+
+        mtl: mtl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Mod-Tap (Left)";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <50 51 52 53 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
+        };
+
+        mtr: mtr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Mod-Tap (Right)";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <50 51 52 53 54 55 56 57 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+        };
     };
 
     keymap {
@@ -191,11 +224,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC      &kp N1          &kp N2      &kp N3    &kp N4        &kp N5                          &kp N6     &kp N7    &kp N8    &kp N9      &kp N0      &kp EQUAL
-&kp TAB      &kp SQT         &kp COMMA   &kp DOT   &kp P         &kp Y                           &kp F      &kp G     &kp C     &kp R       &kp L       &kp FSLH
-&shiftmorph  &mt LEFT_GUI A  &mt LALT O  &kp E     &kp U         &kp I                           &kp D      &kp H     &kp T     &mt LALT N  &mt LGUI S  &kp MINUS
-&ctrl_sym    &kp SEMI        &kp Q       &kp J     &kp K         &kp X      &kp DEL    &kp BSPC  &kp B      &kp M     &kp W     &kp V       &kp Z       &kp BSLH
-                                         &flatten  &sk LEFT_ALT  &kp SPACE  &mo 2      &mo 1     &kp ENTER  &kp BSPC  &kp RGUI
+&kp ESC     &kp N1           &kp N2       &kp N3    &kp N4        &kp N5                          &kp N6     &kp N7    &kp N8    &kp N9       &kp N0       &kp EQUAL
+&kp TAB     &kp SQT          &kp COMMA    &kp DOT   &kp P         &kp Y                           &kp F      &kp G     &kp C     &kp R        &kp L        &kp FSLH
+&sk LSHIFT  &mtl LEFT_GUI A  &mtl LALT O  &kp E     &kp U         &kp I                           &kp D      &kp H     &kp T     &mtr LALT N  &mtr LGUI S  &kp MINUS
+&sk LCTRL   &kp SEMI         &kp Q        &kp J     &kp K         &kp X      &kp DEL    &kp BSPC  &kp B      &kp M     &kp W     &kp V        &kp Z        &kp BSLH
+                                          &flatten  &sk LEFT_ALT  &kp SPACE  &mo 2      &mo 1     &kp ENTER  &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
